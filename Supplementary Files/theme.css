@@ -1,0 +1,272 @@
+/* Set up the font type for the whole body */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    min-width: 700px;
+    min-height: 100px;
+}
+/* Set up the background of the page with a coor gradient and image underneath */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(71,10,18, 0.95)), url('../Pechanga Assets/Pechanga.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Position the header links in the top right of the screen */
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+}
+/* Shrink down the logo on the top left and make it clickable */
+.logo{
+    width: 225px;
+    cursor: pointer;
+}
+/* Set up the header links to be side by side without bullet points on the top right */
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; /* put the bars we set up below under the header links */
+}
+/* Change the font color and capitalize each header link */
+.navbar ul li a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar ul li input[type="submit"]{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* Set up underline bars to be positions under the header links */
+.navbar ul li::after{
+    content: '';
+    height: 0;
+    width: 100%; /* the bars will be invisible until the next bracket section takes place */
+    background: rgb(218,193,122);
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* let the bars hang lower beneath the header links */
+    transition: 0.5s; /* takes 0.5 seconds for the bar to fully appear under the header link */
+}
+/* makes the underline bar appear when you hover over one of the headr links */
+.navbar ul li:hover:after{
+    height: 65%;
+}
+/* Set the position and change the font color of the page header and the subheader */
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(0, 0, 0)
+}
+/* change the font size of the h1 header */
+.content h1{
+    font-size: 70px;
+    margin-top: 20px;
+}
+/* change the font size of the p subheader */
+.content p{
+    font-size: 30px;
+    margin: 30px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* change the attributes of the buttons under the header */
+button{
+    width: 220px;
+    height: 60px;
+    padding: 20px 0;
+    text-align: center;
+    margin: 20px 10px;
+    line-height: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid rgb(71,10,18);
+    background: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative; /* will highlight the botton when you hover over with the mouse */
+    overflow: hidden;
+}
+/* add a hover effect to the buttons */
+span{
+    background: rgb(218,193,122);
+    height: 0;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1; /* ensures the hover effect does not block the text */
+    transition: 0.5s;
+}
+/* the hover effect will go through when the mouse is over the button */
+button:hover span{
+    height: 100%;
+}
+/* set the position of the footer details */
+.footer{
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    width: 100%;
+    color:rgb(0, 0, 0);
+    text-align: left;
+}
+/* creates a function that fades in the webpage from white */
+@keyframes fadeIn{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+/* animation that plays when you enter a webpage */
+.fade-in-image{
+    animation: fadeIn 1.5s;
+}
+.table_whole{
+    background-color: rgb(200, 200, 200);
+    margin: auto;
+    width: fit-content;
+    height: 254px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.table_whole_admin{
+    background-color: rgb(200, 200, 200);
+    margin: auto;
+    width: fit-content;
+    height: 350px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.table_search{
+    background-color: rgb(218,193,122);
+    margin: auto;
+    width: 81.95%;
+    height: 254px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    left: 9%;
+    z-index: 3;
+    border: 5px solid rgb(100, 100, 100);
+}
+.table_search_admin{
+    background-color: rgb(218,193,122);
+    margin: auto;
+    width: 87%;
+    height: 350px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    left: 6.3%;
+    z-index: 3;
+    border: 5px solid rgb(100, 100, 100);
+}
+.headings{
+    background-color: rgb(200, 200, 200);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.input_box{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(200, 200, 200);
+    position: relative;
+    top: 50%;
+    left: 40%;
+    box-sizing: border-box;
+    border: 5px solid rgb(100, 100, 100);
+}
+.input_box p{
+    font-weight: bold;
+}
+.input_box input{
+    width: 80%;
+    margin-bottom: 10px;
+}
+.input_box input[type="input"], input[type="password"]{
+    border: none;
+    border-bottom: 2px solid rgb(100, 100, 100);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+}
+.input_box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40;
+    background: rgb(150, 150, 150);
+    font-size: 18px;
+    border-radius: 10px;
+}
+.input_box input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(100, 100, 100);
+}
+.search_box input[type="text"]{
+    width: 43%;
+    margin-bottom: 10px;
+    height: 40;
+    font-size: 16px;
+    outline: none;
+    border: 5px solid rgb(100, 100, 100);
+}
+.search_box input[type="submit"]{
+    height: 30px;
+    width: 70px;
+    background-color: rgb(71,10,18);
+    color:rgb(255, 255, 255);
+}
+.search_box input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(171,110,118);
+}
+.edit_employee{
+    padding: 1px 5px;
+    background-color: rgb(200, 200, 200);
+    width: fit-content;
+    position: relative;
+    left: 20%;
+    top: 10px;
+    border: 5px solid rgb(100, 100, 100);
+}
+.add_employee{
+    padding: 1px 5px;
+    background-color: rgb(200, 200, 200);
+    width: fit-content;
+    position: relative;
+    left: 28%;
+    top: 15px;
+    border: 5px solid rgb(100, 100, 100);
+}
+.Update{
+    background-color: rgb(218,193,122);
+    width: fit-content;
+    color: rgb(71,10,18);
+    position:relative;
+    font-weight: bold;
+    left: 37%;
+    padding: 1px 1px;
+    border: 5px solid rgb(118,93,22);
+}
