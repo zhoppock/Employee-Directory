@@ -2,7 +2,7 @@ Welcome to the Pechanga Employee Directory.
 
 >>>>>>>>>>
 For proper use with the PHP files, please ensure the following is set up: 
- - Make sure you have PHP installed on your computer.
+ - Make sure you have PHP installed on your computer. (Manual: https://www.php.net/manual/en/faq.installation.php)
  - In the file 'php.ini', have the line 'extension=pdo_sqlite' uncommented (remove the ';' in front).
  - In the main directory with the file 'pechanga_directory_main_page.html', open up the Command Line (cmd) or navigate to it in CMD.
  - In CMD, type 'php -S localhost:1234' to set up a host server to run the PHP pages.
