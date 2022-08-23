@@ -20,6 +20,8 @@ Login credentials are for test purposes and are as such at this time:
  - Username: admin; Password: admin
  - Username: jerry; Password: jerry
 
+The 'password_hash.php' file in Supplementary Files can be used to generate a new hashed password for the database.
+
 Please ensure that each department has a Vice President, Director, Assistant Director, Manager, Assistant Manager, Supervisor, and at least 1 Employee.
 
 ---------------------------------------------
